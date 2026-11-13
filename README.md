@@ -12,11 +12,12 @@ les livrables et les critères. Ce README est ton tableau de bord au quotidien.
 
 ---
 
-## 🚀 Démarrage (3 commandes)
+## 🚀 Démarrage (4 étapes)
 
 ```bash
 # 0. Clone ton repo perso fraîchement créé
 git clone git@github.com:<ton-user>/M0-B1-maintenance-<prenom>.git
+# (sans clé SSH : git clone https://github.com/<ton-user>/M0-B1-maintenance-<prenom>.git)
 cd M0-B1-maintenance-<prenom>
 
 # 1. Environnement virtuel + dépendances
@@ -27,7 +28,8 @@ pip install -r requirements.txt
 # 2. Lancer l'API (rechargement auto) — dans un terminal
 uvicorn app.main:app --reload
 
-# 3. Lancer les tests — dans un autre terminal
+# 3. Lancer les tests — dans un autre terminal (réactive d'abord l'environnement)
+source .venv/bin/activate
 pytest
 ```
 
