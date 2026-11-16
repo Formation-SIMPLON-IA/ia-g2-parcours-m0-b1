@@ -130,7 +130,7 @@ Le squelette **M0-B1** contient un `Dockerfile` vide commenté. Complète-le.
 7. Test :
    ```bash
    curl http://localhost:8000/health
-   curl -X POST http://localhost:8000/predict -H "Content-Type: application/json" -d @sample.json
+   curl -X POST http://localhost:8000/predict -H "Content-Type: application/json" -d '{"type_machine":"pompe","age_machine_jours":1200,"derniere_maintenance_jours":90,"temperature_moyenne":85.0,"vibration_moyenne":4.2,"pression_moyenne":6.5,"nb_incidents_3_mois":1}'
    ```
 
 ✅ **Solution attendue** : `/health` répond 200 depuis le conteneur.

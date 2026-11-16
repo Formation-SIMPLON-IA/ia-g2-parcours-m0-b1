@@ -2,7 +2,7 @@
 
 > Brief associé : M0-B1
 > Durée de lecture + pratique : ~45 min
-> Pré-requis : Python 3.11+, environnement virtuel actif (cf. P0).
+> Pré-requis : Python 3.11+, environnement virtuel actif.
 
 ## Pourquoi cette techno ?
 
@@ -133,8 +133,7 @@ solution est masquée plus bas — à révéler seulement après ta tentative.
    scikit-learn*).
 4. Construire un `dict {classe: proba}` en zippant `model.classes_` et les
    probabilités.
-5. Logger l'événement (`loguru.logger.info`) — *dans le brief, le logging se fait à la tâche 4 ; cette ligne est facultative ici*.
-6. Retourner une réponse typée `PredictionResponse(criticite=..., probabilites=...)`.
+5. Retourner une réponse typée `PredictionResponse(criticite=..., probabilites=...)`.
 
 ✅ **Résultat attendu** : un POST `/predict` avec un payload JSON valide doit
 retourner `200` + `{"criticite": "...", "probabilites": {...}}`. Un payload
@@ -146,7 +145,6 @@ invalide doit retourner `422`.
 ```python
 import pandas as pd
 from fastapi import HTTPException
-from loguru import logger
 
 @app.post("/predict", response_model=PredictionResponse)
 def predict(item: MachineInput) -> PredictionResponse:
@@ -166,10 +164,8 @@ def predict(item: MachineInput) -> PredictionResponse:
     # 4. Construire le dict {classe: proba}
     proba_dict = {str(c): float(p) for c, p in zip(classes, probas)}
 
-    # 5. Logger l'événement
-    logger.info(f"Prédiction : {classe} (entrée={item.model_dump()})")  # dans le brief, le logging se fait à la tâche 4
 
-    # 6. Retourner la réponse typée
+    # 5. Retourner la réponse typée
     return PredictionResponse(criticite=classe, probabilites=proba_dict)
 ```
 

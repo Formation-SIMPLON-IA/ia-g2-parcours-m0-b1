@@ -2,7 +2,7 @@
 
 > Brief associé : **M0-B1**.
 > Mode : individuel, 5 heures.
-> Le brief lui-même est diffusé sur **Simplonline** (énoncé + 6 liens utiles).
+> Le brief lui-même est diffusé sur **Simplonline** (énoncé et liens utiles).
 
 Ce dossier rassemble **les 4 mini-cours pédagogiques** auxquels le brief M0-B1
 fait référence + les liens officiels. Le **squelette de code**, ce sont les
@@ -24,7 +24,7 @@ fichiers à la **racine de ce repo** que tu as créé via « Use this template �
 
 > 💡 **Tu n'es pas obligé·e de lire les mini-cours en amont.** Chacun est conçu
 > pour être consulté **au moment où tu en as besoin**, pendant la tâche
-> correspondante. Lecture + exercice guidé en ~15 min chacun.
+> correspondante.
 
 ---
 

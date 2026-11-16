@@ -96,7 +96,6 @@ def predict(item: MachineInput) -> PredictionResponse:
     4. Appeler `model.predict_proba(df)[0]` pour obtenir les probabilités.
        Les classes correspondantes sont dans `model.classes_`.
     5. Construire et retourner un `PredictionResponse`.
-    6. Logging: task 4 (not here).
 
     Args:
         item: caractéristiques de la machine (cf. `schemas.MachineInput`).

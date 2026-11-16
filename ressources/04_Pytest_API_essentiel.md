@@ -102,7 +102,7 @@ s'exécute pas, et `model_loaded` serait `False`.
 ## Exercice guidé
 
 Tu as déjà 2 tests pour `/health` dans `tests/test_health.py` (livrés au clone).
-**Ajoute 3 tests pour `/predict`** dans un nouveau fichier `tests/test_predict.py`.
+**Ajoute 3 fonctions de test pour `/predict`** dans un nouveau fichier `tests/test_predict.py`.
 
 **Cherche par toi-même** en t'appuyant sur la section *Concepts clés* et l'exemple
 *Avec FastAPI TestClient* ci-dessus. La solution est masquée plus bas — à révéler
@@ -134,9 +134,9 @@ seulement après ta tentative.
 ```
 
 ✅ **Résultat attendu** :
-- `pytest -v` affiche **6 tests** (2 sur `/health` + 4 sur `/predict`),
+- `pytest -v` affiche **9 tests** (2 sur `/health` + 7 sur `/predict`, le test paramétré comptant pour 5),
   tous PASSED.
-- Le test paramétré exécute 4 cas (un par type de machine).
+- Le test paramétré exécute 5 cas (un par type de machine).
 
 <details>
 <summary>🔒 <strong>Solution</strong> — clique pour révéler (après avoir cherché)</summary>
