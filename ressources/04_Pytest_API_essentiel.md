@@ -117,8 +117,8 @@ seulement après ta tentative.
    somme des `probabilites.values()` ≈ 1.
 3. **Test cas invalide** : POST avec `type_machine: "INCONNU"`, attendu `422`
    (validation Pydantic).
-4. **Test paramétré** : `@pytest.mark.parametrize` sur 4 types
-   (`pompe`, `convoyeur`, `presse`, `four`), chaque cas doit renvoyer `200`.
+4. **Test paramétré** : `@pytest.mark.parametrize` sur les 5 types
+   (`pompe`, `compresseur`, `convoyeur`, `presse`, `four`), chaque cas doit renvoyer `200`.
 
 **Payload de référence** (à adapter selon les tests) :
 ```json
@@ -192,7 +192,7 @@ def test_predict_type_machine_invalide(client):
 
 
 # 3. Plusieurs scénarios paramétrés
-@pytest.mark.parametrize("type_m", ["pompe", "convoyeur", "presse", "four"])
+@pytest.mark.parametrize("type_m", ["pompe", "compresseur", "convoyeur", "presse", "four"])
 def test_predict_tous_types_machine(client, type_m):
     payload = {
         "type_machine": type_m,

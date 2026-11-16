@@ -33,7 +33,7 @@ fichiers à la **racine de ce repo** que tu as créé via « Use this template �
 Ce dossier `ressources/` est livré dans le **repo template GitHub**
 `Formation-SIMPLON-IA/ia-g2-parcours-m0-b1`.
 Si tu lis ce fichier, c'est que tu as déjà cliqué sur « Use this template » et
-cloné ton repo perso `M0-B1-maintenance-<prénom>`. Vérifie qu'il tourne :
+cloné ton repo perso `M0-B1-maintenance-<prenom>`. Vérifie qu'il tourne :
 
 ```bash
 pip install -r requirements.txt
@@ -55,7 +55,7 @@ démarrage complet, cf. le [`README.md`](../README.md) à la racine du repo.
 - **≥ 3 tests pytest** pour `/predict` qui passent
 - Un **Dockerfile** qui build une image fonctionnelle
 - Un **README** qui permet à un dev externe de lancer le service en 5 minutes
-- Un repo GitHub `M0-B1-maintenance-<prénom>` avec ≥ 5 commits propres
+- Un repo GitHub `M0-B1-maintenance-<prenom>` avec ≥ 5 commits propres
 
 → Compétence visée : **C6 — imiter** (intégration d'un modèle livré dans un service API).
 

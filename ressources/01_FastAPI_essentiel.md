@@ -133,7 +133,7 @@ solution est masquée plus bas — à révéler seulement après ta tentative.
    scikit-learn*).
 4. Construire un `dict {classe: proba}` en zippant `model.classes_` et les
    probabilités.
-5. Logger l'événement (`loguru.logger.info`).
+5. Logger l'événement (`loguru.logger.info`) — *dans le brief, le logging se fait à la tâche 4 ; cette ligne est facultative ici*.
 6. Retourner une réponse typée `PredictionResponse(criticite=..., probabilites=...)`.
 
 ✅ **Résultat attendu** : un POST `/predict` avec un payload JSON valide doit
@@ -167,7 +167,7 @@ def predict(item: MachineInput) -> PredictionResponse:
     proba_dict = {str(c): float(p) for c, p in zip(classes, probas)}
 
     # 5. Logger l'événement
-    logger.info(f"Prédiction : {classe} (entrée={item.model_dump()})")
+    logger.info(f"Prédiction : {classe} (entrée={item.model_dump()})")  # dans le brief, le logging se fait à la tâche 4
 
     # 6. Retourner la réponse typée
     return PredictionResponse(criticite=classe, probabilites=proba_dict)

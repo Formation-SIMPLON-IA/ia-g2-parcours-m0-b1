@@ -22,9 +22,9 @@
 #      → uvicorn app.main:app --host 0.0.0.0 --port 8000
 #      → ne PAS utiliser --reload en image de production.
 #
-# Bonus (facultatif) :
-#   - Utilisateur non-root (USER non-root après mkdir + chown)
-#   - HEALTHCHECK qui interroge /health
+# Bonus (optional, same as in the brief), one of:
+#   - add a Docker HEALTHCHECK that queries /health
+#   - write one additional parametrized test (in tests/, not in this file)
 #
 # Commande type pour build et lancer une fois ce fichier complété :
 #   docker build -t fastia-maintenance:dev .

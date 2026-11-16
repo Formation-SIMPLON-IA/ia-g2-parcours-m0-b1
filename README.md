@@ -2,8 +2,8 @@
 
 > **Repo template GitHub.** Clique sur **« Use this template »** en haut à
 > droite de cette page → **Create a new repository** → nomme-le
-> `M0-B1-maintenance-<prénom>` sur **ton** compte GitHub personnel.
-> C'est ce nouveau repo que tu cloneras pour travailler.
+> `M0-B1-maintenance-<prenom>` sur **ton** compte GitHub personnel
+> (`<prenom>` : ton prénom en minuscules, sans accent). C'est ce nouveau repo que tu cloneras pour travailler.
 
 Brief **M0-B1 « Intégrer un service IA de maintenance prédictive via API REST »**
 — **individuel**, 5 h.
@@ -25,10 +25,10 @@ python -m venv .venv && source .venv/bin/activate     # Linux/macOS
 # .venv\Scripts\activate                              # Windows
 pip install -r requirements.txt
 
-# 2. Lancer l'API (rechargement auto) — dans un terminal
+# 2. Lancer l'API (rechargement auto) — dans un premier terminal
 uvicorn app.main:app --reload
 
-# 3. Lancer les tests — dans un autre terminal (réactive d'abord l'environnement)
+# 3. Lancer les tests — dans un second terminal (réactive d'abord l'environnement)
 source .venv/bin/activate
 pytest
 ```
@@ -52,7 +52,7 @@ M0-B1-maintenance-<prenom>/
 │   └── maintenance_data.csv ← dataset synthétique 6 500 lignes
 ├── model/
 │   ├── train_baseline.py   ← entraînement (déjà exécuté)
-│   └── model.joblib        ← modèle pré-entraîné ~6,6 Mo (chargé au démarrage)
+│   └── model.joblib        ← modèle pré-entraîné ~5,7 Mo (chargé au démarrage)
 ├── tests/
 │   ├── __init__.py
 │   └── test_health.py      ← test pytest fonctionnel au clone (✅)
@@ -93,7 +93,7 @@ M0-B1-maintenance-<prenom>/
 | 4 | Logging Loguru | [`03_Loguru_essentiel.md`](./ressources/03_Loguru_essentiel.md) | 30 min |
 | 5 | Tests pytest `/predict` | [`04_Pytest_API_essentiel.md`](./ressources/04_Pytest_API_essentiel.md) | 45 min |
 | 6 | Conteneurisation Docker | [`02_Docker_essentiel.md`](./ressources/02_Docker_essentiel.md) | 45 min |
-| 7 | README + push final + lien du repo déposé sur Simplonline | — | 30 min |
+| 7 | README (colle-y les 3 preuves : `pytest -v`, `curl /health`, `docker images`) + push final + lien du repo déposé sur Simplonline | — | 30 min |
 
 Cf. [`./ressources/README.md`](./ressources/README.md) pour le détail. Les
 mini-cours se lisent **au moment où tu en as besoin** (~15 min chacun).
@@ -106,7 +106,7 @@ mini-cours se lisent **au moment où tu en as besoin** (~15 min chacun).
    fonctionne vaut mieux qu'une archi sur-engineered qui plante.
 2. **Des tests qui passent** : ≥ 3 tests pour `/predict` en PASSED.
 3. **Un README** qui permet à un collègue de lancer le service en 5 minutes.
-4. **Un Dockerfile qui build**, même non optimisé.
+4. **Un Dockerfile qui build** et une image qui répond sur `/health`.
 
 → Compétence visée : **C6 — imiter** (intégrer un modèle livré dans un service API).
 
